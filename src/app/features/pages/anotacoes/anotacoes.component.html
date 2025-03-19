@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>Anotações:</h2>
+    <form (submit)="salvarAnotacao($event)">
+      <textarea [(ngModel)]="anotacao" name="anotacao" placeholder="Digite suas anotações"></textarea>
+      <button id="botaoSalvar" type="submit">Salvar</button>
+    </form>
+    <div class="cards-container">
+      <div *ngFor="let item of anotacoes; let i = index" class="card">
+        {{ item }}
+        <button class="delete-btn" (click)="removerAnotacao(i)">Excluir</button>
+      </div>
+    </div>
+  </div>
+

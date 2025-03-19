@@ -1,0 +1,54 @@
+<div class="container">
+  <h2>Adicionar Movimentação</h2>
+  
+  <form [formGroup]="movimentacaoForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="valor">Valor:</label>
+      <input 
+        type="number" 
+        id="valor" 
+        formControlName="valor" 
+        class="form-control" 
+        placeholder="Digite o valor"
+        [ngClass]="{'invalid': movimentacaoForm.get('valor')?.invalid && movimentacaoForm.get('valor')?.touched}"
+      >
+      <div *ngIf="movimentacaoForm.get('valor')?.invalid && movimentacaoForm.get('valor')?.touched" class="error-message">
+        Valor é obrigatório e deve ser maior que zero
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="descricao">Descrição:</label>
+      <input 
+        type="text" 
+        id="descricao" 
+        formControlName="descricao" 
+        class="form-control" 
+        placeholder="Digite a descrição"
+        [ngClass]="{'invalid': movimentacaoForm.get('descricao')?.invalid && movimentacaoForm.get('descricao')?.touched}"
+      >
+      <div *ngIf="movimentacaoForm.get('descricao')?.invalid && movimentacaoForm.get('descricao')?.touched" class="error-message">
+        Descrição é obrigatória
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label>Tipo de Movimentação:</label>
+      <div class="radio-group">
+        <label>
+          <input type="radio" formControlName="tipoMovimentacao" value="entrada"> Entrada
+        </label>
+        <label>
+          <input type="radio" formControlName="tipoMovimentacao" value="saida"> Saída
+        </label>
+      </div>
+      <div *ngIf="movimentacaoForm.get('tipoMovimentacao')?.invalid && movimentacaoForm.get('tipoMovimentacao')?.touched" class="error-message">
+        Selecione o tipo de movimentação
+      </div>
+    </div>
+    
+    <div class="button-group">
+      <button type="submit" class="btn btn-primary">Adicionar</button>
+      <button type="button" class="btn btn-secondary" (click)="limparCampos()">Limpar</button>
+    </div>
+  </form>

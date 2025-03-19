@@ -1,0 +1,33 @@
+<!-- historico.component.html -->
+<div class="container">
+  <h2>Histórico de Movimentações</h2>
+  
+  <div class="saldo-container">
+    <div class="saldo-box" [ngClass]="{'saldo-positivo': saldoTotal >= 0, 'saldo-negativo': saldoTotal < 0}">
+      <div class="saldo-label">Saldo Total:</div>
+      <div class="saldo-valor">R$ {{ formatarValor(saldoTotal) }}</div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button (click)="recarregarDados()" class="btn-reload">Recarregar Dados</button>
+    <button (click)="limparTudo()" class="btn-clear">Limpar Tudo</button>
+  </div>
+
+  <div *ngIf="movimentacoes.length === 0" class="no-data">
+    Nenhuma movimentação encontrada
+  </div>
+
+  <div *ngIf="movimentacoes.length > 0" class="movimentacoes-list">
+    <div *ngFor="let mov of movimentacoes; let i = index" class="movimentacao-item"
+         [ngClass]="{'entrada': mov.tipoMovimentacao === 'entrada', 'saida': mov.tipoMovimentacao === 'saida'}">
+      <div class="movimentacao-data">{{ mov.data }}</div>
+      <div class="movimentacao-descricao">{{ mov.descricao }}</div>
+      <div class="movimentacao-valor">
+        R$ {{ formatarValor(mov.valor) }}
+      </div>
+      <div class="movimentacao-tipo">{{ mov.tipoMovimentacao }}</div>
+      <button (click)="excluirMovimentacao(i)" class="btn-delete">Excluir</button>
+    </div>
+  </div>
+</div>
