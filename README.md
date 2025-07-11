@@ -1,59 +1,67 @@
-# FinancasPessoais
+# 💰 Controle de Finanças Pessoais - Angular 19
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.8.
+Este é um projeto em **desenvolvimento** que tem como objetivo organizar e visualizar **entradas e saídas financeiras pessoais** de forma prática e visual, utilizando **Angular 19**, **TypeScript** e **Chart.js** para os gráficos.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 O que o projeto faz
 
-```bash
-ng serve
-```
+- Permite registrar **recebimentos e pagamentos**
+- Organiza as movimentações por **tipo**, **valor** e **data**
+- Calcula o saldo total e saldo por categoria
+- Estrutura pronta para **visualização com gráficos dinâmicos** (em progresso)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🧪 Tecnologias utilizadas
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- ✅ **Angular 19** (CLI)
+- ✅ **TypeScript**
+- ✅ **Reactive Forms** para formulários dinâmicos e validações
+- ✅ **Chart.js** (ainda em fase de integração)
+- ✅ **SCSS/CSS** para estilo modularizado
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 📊 Sobre o gráfico (Chart.js)
 
-```bash
-ng generate --help
-```
+A biblioteca **Chart.js** foi integrada ao projeto com o objetivo de exibir gráficos de:
 
-## Building
+- Comparativo entre receitas e despesas
+- Evolução do saldo ao longo do tempo
+- Categorias com maior peso nos gastos
 
-To build the project run:
+> ⚠️ *A visualização dos gráficos ainda está em construção, mas a estrutura já está pronta para receber os dados.*
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 🏗️ Status do projeto
 
-## Running unit tests
+> 🧱 **Projeto em construção.**  
+> Já é possível registrar movimentações financeiras, ver totais e acompanhar o fluxo.  
+> As próximas etapas envolvem:
+> - Finalizar exibição de gráficos com Chart.js
+> - Melhorar layout e responsividade
+> - Adicionar filtros por período e categoria
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+---
 
-```bash
-ng test
-```
+## 🎯 Objetivo
 
-## Running end-to-end tests
+Este projeto foi criado para **praticar conceitos avançados de Angular**, como:
 
-For end-to-end (e2e) testing, run:
+- Componentes standalone
+- Serviços e injeção de dependência
+- Estrutura de formulários reativos
+- Manipulação de listas e estados
+- Preparação de dados para visualização gráfica
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 👨‍💻 Autor
 
-## Additional Resources
+Desenvolvido por [Yago Carvalho]  
+📷 Instagram: [@iyagocarvalhodev](https://www.instagram.com/iyagocarvalhodev/)
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
